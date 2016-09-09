@@ -1,26 +1,21 @@
 /*
-  四則演算は他言語同様 + - * / % で対応可能
-  インクリメント、デクリメントも対応可能
-  代入演算子も対応可能
-  論理演算子も対応可能(varではなくvalなのが一般的?)
+  valは定数の時に主に用いられる。SwiftでいうStrong?
+  ifなどの条件分岐も他言語同様
+  条件に合わせて値を設定することも出来る
 */
 
 fun main(args: Array<String>) {
-  val x = 10
-  println(x / 3 )
-  println(x / 3.0 )
-  println(x % 3.0 )
+  val score = 100
+  val score_2 = 10
 
-  var y = 10
-  y++
-  println(y)
-  y--
-  println(y)
+  if (score > 80) {
+    println("GREAT!!")
+  }else if (score > 60){
+    println("GOOD!")
+  }else{
+    println("soso...")
+  }
 
-  var z = 12
-  z += 6
-  println(z)
-
-  val flag = true
-  println(!flag)
+  val result = if (score_2 > 80) "GREAT!" else "soso.."
+  println(result)
 }

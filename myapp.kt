@@ -7,7 +7,6 @@
 
 */
 
-
 fun main(args: Array<String>) {
   var name = "g08m11"
   println("my name is $name")
