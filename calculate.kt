@@ -1,21 +1,20 @@
 /*
-  valは定数の時に主に用いられる。SwiftでいうStrong?
-  ifなどの条件分岐も他言語同様
-  条件に合わせて値を設定することも出来る
+  whenの書き方は独特なので注意
+  swiftだとcaseを使い「case num = 10」といった表現をするが
+  kotinは「-> 10」と表現する
+  また型もwhen内での条件が数値であった場合、
+  比較対象も数値である必要がある。(ロジック見ずに適当にStringとかにするとコケる)
+
 */
 
 fun main(args: Array<String>) {
-  val score = 100
-  val score_2 = 10
+  val num = 10
 
-  if (score > 80) {
-    println("GREAT!!")
-  }else if (score > 60){
-    println("GOOD!")
-  }else{
-    println("soso...")
+  when(num){
+    0 -> println("ZERO")
+    1 -> println("ONE")
+    2, 3 -> println("Two Or Three")
+    in 4..10 -> println("I don't know. so many")
+    else -> println("other")
   }
-
-  val result = if (score_2 > 80) "GREAT!" else "soso.."
-  println(result)
 }
