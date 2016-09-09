@@ -1,37 +1,18 @@
 /*
- 変数
-   - val:型推論(Stringなどの用途目的の型を定義しないとエラーとなる)
-   - var:valよりも楽。書き方はSwiftやRubyっぽい。型定義不要。
-　型
-   - String:文字列(複数OK)、ダブルクゥオーテーション
-   - c:文字型(単一のみ)、ダブルクゥオーテーションでなくシングルクゥオーテーション
-   - Int:数値
-   - Long:数値型の末尾にLが必須
-   - Double:浮動小数点型
-   - Flat:浮動小数点型の末尾にFを付けるイメージ
-   - Boolean:真偽値、RubyみたいにBoolではなく最後まで書くパターン
+  文字列なら$を使うことでRubyの#{}と同じことが出来る
+  数値による計算なら${}で${}内で計算が出来る
+  改行とタブのコードは他言語と一緒
+  改行:\n
+  タブ\t
+
 */
 
 
 fun main(args: Array<String>) {
-  val msg: String = "Next Hello World"
-  println(msg)
+  var name = "g08m11"
+  println("my name is $name")
 
-  var c:Char = 'c'
-  println(c)
+  println("my score is ${12 * 23}")
 
-  val i: Int  = 100
-  println( i )
-
-  val l: Long  = 1000000000L
-  println( l )
-
-  val d: Double  = 3.141956
-  println( d )
-
-  val f: Float  = 3.141956F
-  println( f )
-
-  var b: Boolean = true
-  println(b)
+  println("I'm \t so \n Happy")
 }
